@@ -52,54 +52,34 @@ const CustomControl = (props) => {
 
 export default class App extends Component {
     render() {
-        return <div>
-        <Map center = {{
-                lng: 105.403119,
-                lat: 38.028658
-            }} 
-            zoom = '5' 
-            mapStyle={simpleMapStyle}>
-            <Marker 
-                position={{lng: 116.402544, lat: 39.928216}} 
-                icon="simple_red" 
-                events={{
-                    click: () => {
-                        console.log('marker click event');
-                    }
-                }}
-            />
-            <Marker position={{lng: 119.0874, lat: 36.665582}} icon="simple_blue" />
-            <Marker position={{lng: 112.538537, lat: 37.874899}} icon="loc_blue" />
-            <Marker position={{lng: 114.501011, lat: 33.920864}} icon="loc_red" />
-            <Marker position={{lng: 109.210063, lat: 34.339622}} icon="start" />
-            <Marker position={{lng: 109.430831, lat: 38.211366}} icon="end" />
-        </Map>
-        <Map center = {{
-                lng: 105.403119,
-                lat: 38.028658
-            }}
-            zoom = '5' 
-            mapStyle={simpleMapStyle}>
-            <div style={{position: 'absolute', left: '10px', top: '10px',  color: 'white', background: 'blue'}}>自定义组件</div>
-            <CustomControl />
-            <Marker position={{lng: 109.430831, lat: 38.211366}} offset={new BMap.Size(-75, -60)}>
-                <div onClick={function(){alert(1)}} style={{width: '150px', height: '40px', lineHeight: '40px', background: 'red', textAlign: 'center'}}>自定义覆盖物</div>
-            </Marker>
-            <Marker position={{lng: 109.430831, lat: 38.211366}}>
-            </Marker>
-        </Map>
-        <Map center = {{
-                lng: 105.403119,
-                lat: 38.028658
-            }}
-            zoom = '5' 
-            mapStyle={simpleMapStyle}>
-            {markers.map((marker, index) => {
-                var icon = "red" + (index + 1);
-                return <Marker map={this.props.map} icon={icon} position={{lng: marker.lng, lat: marker.lat}} {...marker} />
-            })}
-        </Map>
-        </div>
+        return (
+            <div>
+                <Map center = {{
+                        lng: 105.403119,
+                        lat: 38.028658
+                    }} 
+                    zoom = '5' 
+                    mapStyle={simpleMapStyle}>
+                    <Marker 
+                        position={{lng: 116.402544, lat: 39.928216}} 
+                        icon="simple_red" 
+                        events={{
+                            click: () => {
+                                console.log('marker click event');
+                            }
+                        }}
+                    />
+                    <Marker position={{lng: 119.0874, lat: 36.665582}} icon="simple_blue" />
+                    <Marker position={{lng: 112.538537, lat: 37.874899}} icon="loc_blue" />
+                    <Marker position={{lng: 114.501011, lat: 33.920864}} icon="loc_red" />
+                    <Marker position={{lng: 109.210063, lat: 34.339622}} icon="start" />
+                    <Marker position={{lng: 109.430831, lat: 38.211366}} icon="end" />
+                    <Marker position={{lng: 109.430831, lat: 38.211366}} offset={new BMap.Size(-75, -60)}>
+                        <div onClick={function(){alert(1)}} style={{width: '150px', height: '40px', lineHeight: '40px', background: 'red', textAlign: 'center'}}>自定义覆盖物</div>
+                    </Marker>
+                </Map>
+            </div>
+        );
     }
 }
 

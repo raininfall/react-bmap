@@ -74,14 +74,10 @@ export default class Map extends Component {
 
     get toggleMethods() {
         return {
-            enableScrollWheelZoom: ['enableScrollWheelZoom', 'disableScrollWheelZoom'],
             enableDragging: ['enableDragging', 'disableDragging'],
             enableDoubleClickZoom: ['enableDoubleClickZoom', 'disableDoubleClickZoom'],
-            enableKeyboard: ['enableKeyboard', 'disableKeyboard'],
             enableInertialDragging: ['enableInertialDragging', 'disableInertialDragging'],
-            enableContinuousZoom: ['enableContinuousZoom', 'disableContinuousZoom'],
             enablePinchToZoom: ['enablePinchToZoom', 'disablePinchToZoom'],
-            enableAutoResize: ['enableAutoResize', 'disableAutoResize'],
         }
     }
 
@@ -90,7 +86,8 @@ export default class Map extends Component {
             'minZoom',
             'maxZoom',
             'mapType',
-            'enableMapClick'
+            'enableMapClick',
+            'mapStyle'
         ]
     }
 
@@ -133,10 +130,6 @@ export default class Map extends Component {
         var map = new BMap.Map(this.refs.map, options);
 
         this.map = map;
-
-        if (this.props.mapStyle) {
-            map.setMapStyle(this.props.mapStyle);
-        }
 
         var zoom = this.props.zoom;
         

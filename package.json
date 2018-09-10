@@ -1,12 +1,16 @@
 {
   "name": "react-bmap",
-  "version": "1.0.81",
-  "description": "react-bmap",
+  "version": "0.0.1",
+  "description": "react-bmap-lite",
   "main": "lib/index.js",
   "contributors": [
     {
       "name": "kyle",
       "email": "hinikai@gmail.com"
+    },
+    {
+      "name": "RainInFall",
+      "email": "lygjcsrq@163.com"
     }
   ],
   "scripts": {
@@ -21,13 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huiyan-fe/react-bmap.git"
+    "url": "git+https://github.com/raininfall/react-bmap-lite.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huiyan-fe/react-bmap/issues"
+    "url": "https://github.com/raininfall/react-bmap-lite/issues"
   },
-  "homepage": "https://github.com/huiyan-fe/react-bmap#readme",
+  "homepage": "https://github.com/raininfall/react-bmap-lite#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",

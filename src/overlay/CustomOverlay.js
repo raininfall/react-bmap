@@ -32,7 +32,7 @@ CustomOverlay.prototype.initialize = function(map){
     } else {
         div.appendChild(this.content);
     }
-    map.getPanes().labelPane.appendChild(div);
+    map.getPanes().markerPane.appendChild(div);
     return div;
 }
 

@@ -24,6 +24,7 @@ const examples = (
     <Map />
     <h2>Marker 标注 <a href="https://github.com/huiyan-fe/react-bmap/blob/master/docs/examples/components/marker.js">示例代码</a></h2>
     <Marker />
+    {/*
     <h2> Marker(type='order_tip') 简介 <a href="https://github.com/huiyan-fe/react-bmap/blob/master/docs/examples/components/marker-order-tip.js">示例代码</a></h2>
     <MarkerOrderTip />
     <h2>InfoWindow 信息窗口 <a href="https://github.com/huiyan-fe/react-bmap/blob/master/docs/examples/components/infowindow.js">示例代码</a></h2>
@@ -50,6 +51,7 @@ const examples = (
     <Arc />
     <h2>ThickRay 迁徙射线 <a href="https://github.com/huiyan-fe/react-bmap/blob/master/docs/examples/components/thick-ray.js">示例代码</a></h2>
     <ThickRay />
+    */}
   </div>
 )
 

@@ -4,6 +4,7 @@ module.exports = {
     entry: {
         app: path.join(__dirname, 'components/index.js'),
     },
+    devtool: 'source-map',
     output: {
         filename: '[name].js',
         publicPath: 'http://localhost:8090/build',
